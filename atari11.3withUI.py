@@ -1,6 +1,5 @@
 # pygame atari ver 10.2  By : M.H.Khademi
 # Date: 99-12-1
-import pickle
 import pygame                      # import pygame library
 import time                        # import  time  library
 import random                      # import random library
@@ -35,14 +34,6 @@ gameDisplay.blit( Bg , (0,0))                          #  set gameDisplay backgr
 planeimgNormal = pygame.image.load("images\\planeimg.png")      #  load abject image
 planeimgLeft   = pygame.image.load("images\\planeLeft.png")     #  load abject image
 planeimgRight  = pygame.image.load("images\\planeRight.png")    #  load abject image
-planeimgNormal1 = pygame.image.load("images\\plane2\\normal.png")      #  load abject 2 image
-planeimgLeft1   = pygame.image.load("images\\plane2\\left.png")     #  load abject 2 image
-planeimgRight1  = pygame.image.load("images\\plane2\\right.png")    #  load abject 2 image
-settingsimg  = pygame.image.load("images\\settings.png")    #  load settings image
-settings1img  = pygame.image.load("images\\settings1.png")    #  load settings1 image
-shopimg  = pygame.image.load("images\\shop.png")    #  load shop image
-shop1img  = pygame.image.load("images\\shop1.png")    #  load shop1 image
-planeimgNormal1s = pygame.transform.scale( planeimgNormal1 , (75 , 75))
 
 #********** def button ()  ****************
 
