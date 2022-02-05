@@ -78,7 +78,10 @@ def game_intro ():
         pygame.display.update()
 
 #********** def Try_Again ()  ****************
-def Try_Again ():
+def Try_Again (passed):
+    f = open('score.txt', 'r+')
+    f.writelines(str(passed))
+    f.close()
     intro = True
     while intro:
         for event in pygame.event.get():
@@ -140,6 +143,8 @@ def crash ():
                      
 def game_loop ():
     crashed = False
+    # f = open('score.txt')
+    # passed = int(f.read())
     passed = 0
     pygame.mixer.music.play(-1)
     x = display_width * 0.48
@@ -194,7 +199,7 @@ def game_loop ():
                 x + plane_width > stuff_start_x and x + plane_width < stuff_start_x + stuff_width :
                 crash()
                 time.sleep(5)
-                Try_Again()
+                Try_Again(passed)
         if x > display_width - plane_width or x < 0 :
             crash()
             time.sleep(5)
